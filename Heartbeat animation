@@ -1,0 +1,62 @@
+<style>
+  .back{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    animation-name: backed;
+    animation-duration: 15s;
+  }
+  .heart{
+    position: absolute;
+    margin: auto;
+    top:0;
+    right:0;
+    bottom :0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #eda6a1;
+    transform: rotate(-45deg);
+    animation-name: beat;
+  }
+  .heart::after{
+    background-color:#eda6a1;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before{
+    content: "";
+    background-color:#eda6a1;
+    border-radius: 50%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  @keyframes backed{
+    50%{
+      background: #e66c70;
+    }
+  }
+  @keyframes beat{
+    0%{ 
+    transform: scale(1) rotate(-45deg);
+    }
+    50%{
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+</style>
+<div class="back"></div>
+<div class="heart"></div>
